@@ -1,0 +1,11 @@
+ALTER TABLE `yk_customer` ADD `access_token` VARCHAR(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT 'access_token' AFTER `date_added`;
+
+ALTER TABLE `yk_customer` ADD `expires_time` INT(15) UNSIGNED NULL DEFAULT '0' COMMENT '³¬Ê±Ê±¼ä' AFTER `access_token`;
+
+ALTER TABLE `yk_user` ADD `openid` VARCHAR(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '微信openid' AFTER `date_added`;
+
+ALTER TABLE `yk_order` ADD `shipping_order_code` VARCHAR(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '快递单号' AFTER `date_modified`;
+
+ALTER TABLE `yk_order` ADD `shipping_order_company` VARCHAR(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '快递公司' AFTER `shipping_order_code`;
+
+ALTER TABLE `yk_customer_coupon` ADD `order_id` INT(11) NOT NULL AFTER `description`;

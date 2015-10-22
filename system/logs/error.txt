@@ -1,0 +1,66 @@
+2015-09-06 10:00:12 - PHP Notice:  Undefined variable: data in E:\software\wamp\www\yankee\catalog\controller\account\lottery.php on line 6
+2015-09-06 10:00:12 - PHP Warning:  extract() expects parameter 1 to be array, null given in E:\software\wamp\www\yankee\system\modification\system\engine\loader.php on line 33
+2015-09-07 7:51:16 - PHP Notice:  Undefined variable: data in E:\software\wamp\www\yankee\admin\controller\payment\wxpay.php on line 10
+2015-09-07 7:51:16 - PHP Warning:  extract() expects parameter 1 to be array, null given in E:\software\wamp\www\yankee\system\modification\system\engine\loader.php on line 33
+2015-09-07 7:51:16 - PHP Notice:  Undefined variable: header in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 1
+2015-09-07 7:51:16 - PHP Notice:  Undefined variable: column_left in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 1
+2015-09-07 7:51:16 - PHP Notice:  Undefined variable: button_save in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 6
+2015-09-07 7:51:16 - PHP Notice:  Undefined variable: cancel in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 7
+2015-09-07 7:51:16 - PHP Notice:  Undefined variable: button_cancel in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 7
+2015-09-07 7:51:16 - PHP Notice:  Undefined variable: heading_title in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 8
+2015-09-07 7:51:16 - PHP Notice:  Undefined variable: breadcrumbs in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 10
+2015-09-07 7:51:16 - PHP Warning:  Invalid argument supplied for foreach() in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 10
+2015-09-07 7:51:16 - PHP Notice:  Undefined variable: text_edit in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 24
+2015-09-07 7:51:16 - PHP Notice:  Undefined variable: action in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 27
+2015-09-07 7:51:16 - PHP Notice:  Undefined variable: tab_general in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 29
+2015-09-07 7:51:16 - PHP Notice:  Undefined variable: tab_order_status in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 30
+2015-09-07 7:51:16 - PHP Notice:  Undefined variable: help_seller_email in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 35
+2015-09-07 7:51:16 - PHP Notice:  Undefined variable: entry_alipay_direct_seller_email in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 35
+2015-09-07 7:51:16 - PHP Notice:  Undefined variable: alipay_direct_seller_email in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 37
+2015-09-07 7:51:16 - PHP Notice:  Undefined variable: entry_alipay_direct_seller_email in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 37
+2015-09-07 7:51:16 - PHP Notice:  Undefined variable: error_alipay_direct_seller_email in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 38
+2015-09-07 7:51:16 - PHP Notice:  Undefined variable: entry_alipay_direct_partner in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 44
+2015-09-07 7:51:16 - PHP Notice:  Undefined variable: alipay_direct_partner in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 46
+2015-09-07 7:51:16 - PHP Notice:  Undefined variable: entry_alipay_direct_partner in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 46
+2015-09-07 7:51:16 - PHP Notice:  Undefined variable: error_alipay_direct_partner in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 47
+2015-09-07 7:51:16 - PHP Notice:  Undefined variable: entry_alipay_direct_security_code in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 54
+2015-09-07 7:51:16 - PHP Notice:  Undefined variable: alipay_direct_security_code in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 56
+2015-09-07 7:51:16 - PHP Notice:  Undefined variable: entry_alipay_direct_security_code in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 56
+2015-09-07 7:51:16 - PHP Notice:  Undefined variable: error_alipay_direct_security_code in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 57
+2015-09-07 7:51:16 - PHP Notice:  Undefined variable: help_total in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 64
+2015-09-07 7:51:16 - PHP Notice:  Undefined variable: entry_total in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 64
+2015-09-07 7:51:16 - PHP Notice:  Undefined variable: alipay_direct_total in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 66
+2015-09-07 7:51:16 - PHP Notice:  Undefined variable: entry_total in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 66
+2015-09-07 7:51:16 - PHP Notice:  Undefined variable: entry_alipay_direct_sort_order in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 73
+2015-09-07 7:51:16 - PHP Notice:  Undefined variable: alipay_direct_sort_order in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 75
+2015-09-07 7:51:16 - PHP Notice:  Undefined variable: entry_alipay_direct_sort_order in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 75
+2015-09-07 7:51:16 - PHP Notice:  Undefined variable: entry_geo_zone in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 80
+2015-09-07 7:51:16 - PHP Notice:  Undefined variable: text_all_zones in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 83
+2015-09-07 7:51:16 - PHP Notice:  Undefined variable: geo_zones in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 84
+2015-09-07 7:51:16 - PHP Warning:  Invalid argument supplied for foreach() in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 84
+2015-09-07 7:51:16 - PHP Notice:  Undefined variable: entry_alipay_direct_status in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 96
+2015-09-07 7:51:16 - PHP Notice:  Undefined variable: alipay_direct_status in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 99
+2015-09-07 7:51:16 - PHP Notice:  Undefined variable: text_enabled in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 103
+2015-09-07 7:51:16 - PHP Notice:  Undefined variable: text_disabled in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 104
+2015-09-07 7:51:16 - PHP Notice:  Undefined variable: help_log in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 111
+2015-09-07 7:51:16 - PHP Notice:  Undefined variable: entry_log in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 111
+2015-09-07 7:51:16 - PHP Notice:  Undefined variable: alipay_direct_log in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 114
+2015-09-07 7:51:16 - PHP Notice:  Undefined variable: text_enabled in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 118
+2015-09-07 7:51:16 - PHP Notice:  Undefined variable: text_disabled in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 119
+2015-09-07 7:51:16 - PHP Notice:  Undefined variable: help_trade_finished in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 133
+2015-09-07 7:51:16 - PHP Notice:  Undefined variable: entry_trade_finished_status in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 133
+2015-09-07 7:51:16 - PHP Notice:  Undefined variable: order_statuses in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 136
+2015-09-07 7:51:16 - PHP Warning:  Invalid argument supplied for foreach() in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 136
+2015-09-07 7:51:16 - PHP Notice:  Undefined variable: help_trade_success in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 148
+2015-09-07 7:51:16 - PHP Notice:  Undefined variable: entry_trade_success_status in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 148
+2015-09-07 7:51:16 - PHP Notice:  Undefined variable: order_statuses in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 151
+2015-09-07 7:51:16 - PHP Warning:  Invalid argument supplied for foreach() in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 151
+2015-09-07 7:51:16 - PHP Notice:  Undefined variable: footer in E:\software\wamp\www\yankee\admin\view\template\payment\wxpay.tpl on line 171
+2015-09-07 8:54:17 - PHP Notice:  Error: Could not load model E:\software\wamp\www\yankee/catalog/model/payment/wxpay.php! in E:\software\wamp\www\yankee\system\modification\system\engine\loader.php on line 24
+2015-09-07 9:46:47 - PHP Notice:  Undefined index: payment_method in E:\software\wamp\www\yankee\catalog\controller\checkout\payment_method.php on line 117
+2015-09-08 9:01:31 - PHP Notice:  Error: Could not load model E:/software/wamp/www/mycncart/catalog/model/custom/general.php! in E:\software\wamp\www\mycncart\system\modification\system\engine\loader.php on line 24
+2015-09-08 9:14:27 - PHP Notice:  Undefined variable: site_key in E:\software\wamp\www\mycncart\catalog\view\theme\optimus\template\product\product.tpl on line 700
+2015-09-08 9:14:27 - PHP Notice:  Undefined variable: site_key in E:\software\wamp\www\mycncart\catalog\view\theme\optimus\template\product\product.tpl on line 700
+2015-10-22 8:47:50 - PHP Notice:  Trying to get property of non-object in E:\software\wamp\www\yankee\system\library\wxapi.php on line 36
+2015-10-22 8:47:50 - PHP Notice:  Trying to get property of non-object in E:\software\wamp\www\yankee\system\library\wxapi.php on line 36
+2015-10-22 8:47:50 - PHP Notice:  Trying to get property of non-object in E:\software\wamp\www\yankee\system\library\wxapi.php on line 60
