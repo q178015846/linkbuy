@@ -1,29 +1,15 @@
 <?php echo $header; ?>
 <div class="container">
-  <div class="container">
-    
-    <?php foreach ($products as $k => $v) {?>
-      <div class="panel panel-default">
-      <div class="panel-body">
-        <a href="#">
-        <img src="http://www.beyankee.com/yankee/image/<?php echo $v['image']?>" class="img-responsive" alt="<?php echo $v['model'] ?>">
-        </a>
-        <div class="pull-left">
-            <?php echo $v['model'] ?>
-        </div>
-         <div class="btn-toolbar pull-right">
-            <div class="btn-group">
-              <a class="btn btn-primary" href="#fakelink"><span class="fui-heart"></span></a>
-              <a class="btn btn-primary" href="#fakelink"><span class="fui-export"></span></a>
-            </div>
-          </div>
-      </div>
-    </div>
-    <?php }?>
-    
-  
-     
-</div>
+  <div class="row"><?php echo $column_left; ?>
+    <?php if ($column_left && $column_right) { ?>
+    <?php $class = 'col-sm-6'; ?>
+    <?php } elseif ($column_left || $column_right) { ?>
+    <?php $class = 'col-sm-9'; ?>
+    <?php } else { ?>
+    <?php $class = 'col-sm-12'; ?>
+    <?php } ?>
+    <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?><?php echo $content_bottom; ?></div>
+    <?php echo $column_right; ?></div>
 </div>
 <script type="text/javascript">
 wx.config({
