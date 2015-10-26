@@ -268,9 +268,9 @@ class Wxapi {
 	{
 		$url = $this->accessCgiTokenUrl("menu/create");
 		//$go_url = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=".$this->wx_appid."&redirect_uri=".urlencode($this->webUrl."yankee/")."&response_type=code&scope=snsapi_base&state=STATE#wechat_redirect";
-		$go_url = $this->webUrl."yankee";
+		$go_url = $this->webUrl."linkbuy";
 		//$order_url = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=".$this->wx_appid."&redirect_uri=".urlencode($this->webUrl."yankee/index.php?route=account/order")."&response_type=code&scope=snsapi_base&state=STATE#wechat_redirect";
-		$order_url = $this->webUrl."yankee/index.php?route=account/order/list_mobile";
+		$order_url = $this->webUrl."linkbuy/index.php?route=account/order/list_mobile";
 		$post_data = ' {
 		     "button":[
 		     {	
@@ -293,12 +293,12 @@ class Wxapi {
 		            {
 		               "type":"view",
 		               "name":"Yankee",
-		               "url":"'.$this->webUrl.'yankee/index.php?route=common/wxapi"
+		               "url":"'.$this->webUrl.'linkbuy/index.php?route=common/wxapi"
 		            },
 		            {
 		            	"type":"view",
 		            	"name":"抽奖",
-		            	"url":"'.$this->webUrl.'yankee/index.php?route=account/lottery"
+		            	"url":"'.$this->webUrl.'linkbuy/index.php?route=account/lottery"
 		            },
 		            {
 		            	"type":"view",
@@ -307,7 +307,7 @@ class Wxapi {
 		            },{
 		            	"type":"view",
 		            	"name":"test",
-		            	"url":"'.$this->webUrl.'yankee/index.php?route=payment/wxpay"
+		            	"url":"'.$this->webUrl.'linkbuy/index.php?route=payment/wxpay"
 		            }]
 		       }]
 		 }';
@@ -322,21 +322,21 @@ class Wxapi {
 	}
 
 	//拉取用户普通授权
-	public function getBaseAuthorize($redirect_uri = "http://www.beyankee.com/yankee/")
+	public function getBaseAuthorize($redirect_uri = "http://www.beyankee.com/linkbuy/")
 	{
 		$go_url = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=".$this->wx_appid."&redirect_uri=".urlencode($redirect_uri)."&response_type=code&scope=snsapi_base&state=STATE#wechat_redirect";
 		return $go_url;
 	}
 
 	//拉取用户详细授权
-	public function getUserinfoAuthorize($redirect_uri = "http://www.beyankee/yankee/")
+	public function getUserinfoAuthorize($redirect_uri = "http://www.beyankee/linkbuy/")
 	{
 		$go_url = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=".$this->wx_appid."&redirect_uri=".urlencode($redirect_uri)."&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect";
 		return $go_url;
 	}
 
 	//通过snsapi_base方式获取openid
-	public function getOpenid($redirect_uri = "http://www.beyankee.com/yankee/",$code)
+	public function getOpenid($redirect_uri = "http://www.beyankee.com/linkbuy/",$code)
 	{
 		//code来换取access_token和openid的url
 		//通过code获得openid
