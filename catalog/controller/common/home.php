@@ -6,7 +6,7 @@ class ControllerCommonHome extends Controller {
 		//正式环境去掉该注释
 		$this->load->library('wxapi');
 		$this->wx = new Wxapi();
-		/*$openid = $this->wx->getOpenid($this->url->link('common/home', '', 'SSL'),$this->request->get['code']);
+		$openid = $this->wx->getOpenid($this->url->link('common/home', '', 'SSL'),$this->request->get['code']);
 		if(isset($openid) && $openid != null){
 			//验证是否已经登录
 			if(!$this->doLogin($openid)){
@@ -14,7 +14,7 @@ class ControllerCommonHome extends Controller {
 
 				$this->response->redirect($this->url->link('account/login', '', 'SSL'));
 			}
-		}*/
+		}
 		
 		$this->document->setTitle($this->config->get('config_meta_title'));
 		$this->document->setDescription($this->config->get('config_meta_description'));
