@@ -1,10 +1,14 @@
 <?php echo $header; ?>
+<body style="padding-bottom:50px;">
+<nav class="navbar navbar-default navbar-static-top">
 <div class="container">
-  <ul class="breadcrumb">
-    <?php foreach ($breadcrumbs as $breadcrumb) { ?>
-    <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
-    <?php } ?>
-  </ul>
+  <a href="#" >
+        <i class="fa fa-chevron-left"></i>
+      </a>
+</div>
+</nav>
+<div class="container">
+ 
   <?php if ($success) { ?>
   <div class="alert alert-success"><i class="fa fa-check-circle"></i> <?php echo $success; ?>
     <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -15,132 +19,43 @@
     <button type="button" class="close" data-dismiss="alert">&times;</button>
   </div>
   <?php } ?>
-  <div class="row"><?php echo $column_left; ?>
-    <?php if ($column_left && $column_right) { ?>
-    <?php $class = 'col-sm-6'; ?>
-    <?php } elseif ($column_left || $column_right) { ?>
-    <?php $class = 'col-sm-9'; ?>
-    <?php } else { ?>
-    <?php $class = 'col-sm-12'; ?>
-    <?php } ?>
-    <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
-      <h2><?php echo $heading_title; ?></h2>
-      <table class="table table-bordered table-hover">
-        <thead>
-          <tr>
-            <td class="text-left" colspan="2"><?php echo $text_order_detail; ?></td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="text-left" style="width: 50%;"><?php if ($invoice_no) { ?>
-              <b><?php echo $text_invoice_no; ?></b> <?php echo $invoice_no; ?><br />
-              <?php } ?>
-              <b><?php echo $text_order_id; ?></b> #<?php echo $order_id; ?><br />
-              <b><?php echo $text_date_added; ?></b> <?php echo $date_added; ?></td>
-            <td class="text-left"><?php if ($payment_method) { ?>
+  <div class="row">
+    <div id="content"  class="col-sm-12"><?php echo $content_top; ?>
+      <div class="panel panel-default">
+         <div class="panel-heading"><?php echo $text_order_detail; ?></div>
+         <ul class="list-group">
+            <li class="list-group-item">
+           <div class="row">
+            <div class="col-xs-6">
+               <ul style="margin-right:5px;" class="list-unstyled">
+                <li><b><?php echo $text_order_id; ?></b> #<?php echo $order_id; ?></li>
+                <li><b><?php echo $text_date_added; ?></b> <?php echo $date_added; ?></li>
+              </ul>
+            </div>
+            <div class="col-xs-6">
+              <ul style="margin-right:5px;" class="list-unstyled">
+                <li><?php if ($payment_method) { ?>
               <b><?php echo $text_payment_method; ?></b> <?php echo $payment_method; ?><br />
-              <?php } ?>
-              <?php if ($shipping_method) { ?>
+              <?php } ?></li>
+                <li><?php if ($shipping_method) { ?>
               <b><?php echo $text_shipping_method; ?></b> <?php echo $shipping_method; ?>
-              <?php } ?></td>
-          </tr>
-        </tbody>
-      </table>
-      <table class="table table-bordered table-hover">
-        <thead>
-          <tr>
-            <td class="text-left" style="width: 50%;"><?php echo $text_payment_address; ?></td>
-            <?php if ($shipping_address) { ?>
-            <td class="text-left"><?php echo $text_shipping_address; ?></td>
-            <?php } ?>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="text-left"><?php echo $payment_address; ?></td>
-            <?php if ($shipping_address) { ?>
-            <td class="text-left"><?php echo $shipping_address; ?></td>
-            <?php } ?>
-          </tr>
-        </tbody>
-      </table>
-      <div class="table-responsive">
-        <table class="table table-bordered table-hover">
-          <thead>
-            <tr>
-              <td class="text-left"><?php echo $column_name; ?></td>
-              <td class="text-left"><?php echo $column_model; ?></td>
-              <td class="text-right"><?php echo $column_quantity; ?></td>
-              <td class="text-right"><?php echo $column_price; ?></td>
-              <td class="text-right"><?php echo $column_total; ?></td>
-              <?php if ($products) { ?>
-              <td style="width: 20px;"></td>
-              <?php } ?>
-            </tr>
-          </thead>
-          <tbody>
-            <?php foreach ($products as $product) { ?>
-            <tr>
-              <td class="text-left"><?php echo $product['name']; ?>
-                <?php foreach ($product['option'] as $option) { ?>
-                <br />
-                &nbsp;<small> - <?php echo $option['name']; ?>: <?php echo $option['value']; ?></small>
-                <?php } ?></td>
-              <td class="text-left"><?php echo $product['model']; ?></td>
-              <td class="text-right"><?php echo $product['quantity']; ?></td>
-              <td class="text-right"><?php echo $product['price']; ?></td>
-              <td class="text-right"><?php echo $product['total']; ?></td>
-              <td class="text-right" style="white-space: nowrap;"><?php if ($product['reorder']) { ?>
-                <a href="<?php echo $product['reorder']; ?>" data-toggle="tooltip" title="<?php echo $button_reorder; ?>" class="btn btn-primary"><i class="fa fa-shopping-cart"></i></a>
-                <?php } ?>
-                <a href="<?php echo $product['return']; ?>" data-toggle="tooltip" title="<?php echo $button_return; ?>" class="btn btn-danger"><i class="fa fa-reply"></i></a></td>
-            </tr>
-            <?php } ?>
-            <?php foreach ($vouchers as $voucher) { ?>
-            <tr>
-              <td class="text-left"><?php echo $voucher['description']; ?></td>
-              <td class="text-left"></td>
-              <td class="text-right">1</td>
-              <td class="text-right"><?php echo $voucher['amount']; ?></td>
-              <td class="text-right"><?php echo $voucher['amount']; ?></td>
-              <?php if ($products) { ?>
-              <td></td>
-              <?php } ?>
-            </tr>
-            <?php } ?>
-          </tbody>
-          <tfoot>
-            <?php foreach ($totals as $total) { ?>
-            <tr>
-              <td colspan="3"></td>
-              <td class="text-right"><b><?php echo $total['title']; ?></b></td>
-              <td class="text-right"><?php echo $total['text']; ?></td>
-              <?php if ($products) { ?>
-              <td></td>
-              <?php } ?>
-            </tr>
-            <?php } ?>
-          </tfoot>
-        </table>
+              <?php } ?></li>
+              </ul>
+            </div>
+           </div>
+          </li>
+          <li class="list-group-item">
+             <ul style="margin-right:5px;" class="list-unstyled">
+                <li><b><?php echo $text_shipping_address; ?></b></li>
+                <li><?php echo $shipping_address; ?></li>
+              </ul>
+          </li>
+          </ul>
       </div>
-      <?php if ($comment) { ?>
-      <table class="table table-bordered table-hover">
-        <thead>
-          <tr>
-            <td class="text-left"><?php echo $text_comment; ?></td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="text-left"><?php echo $comment; ?></td>
-          </tr>
-        </tbody>
-      </table>
-      <?php } ?>
-      <?php if ($histories) { ?>
-      <h3><?php echo $text_history; ?></h3>
-      <table class="table table-bordered table-hover">
+       <?php if ($histories) { ?>
+       <div class="panel panel-default">
+         <div class="panel-heading"><?php echo $text_history; ?></div>
+          <table class="table table-bordered table-hover">
         <thead>
           <tr>
             <td class="text-left"><?php echo $column_date_added; ?></td>
@@ -158,12 +73,67 @@
           <?php } ?>
         </tbody>
       </table>
-      <?php } ?>
-      <div class="buttons clearfix">
-        <div class="pull-right"><a href="<?php echo $continue; ?>" class="btn btn-primary"><?php echo $button_continue; ?></a></div>
       </div>
-      <?php echo $content_bottom; ?></div>
-    <?php echo $column_right; ?></div>
+      <?php } ?>
+
+      
+        <div class="panel panel-default">
+            
+             <ul class="list-group">
+                   <?php foreach ($products as $product) { ?>
+                  <li class="list-group-item">
+                    <a href="#" style="border:none;padding:0px;">
+                    <div class="row">
+                      <div class="col-xs-3 text-center">
+                        
+                          <img alt="64x64" data-src="holder.js/64x64" src="image/<?php echo $product['image']?>" style="width:64px;height:64px;margin:5px;">
+                       
+                      </div>
+                      <div class="col-xs-6  text-left">
+                        <p><?php echo $product['name']; ?></p>
+                        <p>商品编号：<?php echo $product['model']; ?></p>
+
+                      </div>
+                      <div class="col-xs-3  text-right">
+                        <ul style="margin-right:5px;" class="list-unstyled">
+                          <li>￥ <?php echo $product['price']; ?></li>
+                          <li>×<?php echo $product['quantity']; ?></li>
+                        </ul>
+                      </div>
+                    </div>
+                     </a>
+                </li>
+               <?php } ?>
+              </ul>
+            <div class="panel-footer text-left">
+             <?php foreach ($totals as $total) { ?>
+              <b><?php echo $total['title']; ?></b><?php echo $total['text']; ?></br>
+               <?php if ($products) { ?>
+              
+              <?php } ?>
+            <?php } ?>
+              
+            </div>
+          </div>
+      
+     
+     
+      <?php if ($comment) { ?>
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <td class="text-left"><?php echo $text_comment; ?></td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="text-left"><?php echo $comment; ?></td>
+          </tr>
+        </tbody>
+      </table>
+      <?php } ?>
+     </div>
+  </div>
 </div>
 <script type="text/javascript">
   wx.config({
@@ -226,4 +196,22 @@
   }*/
   
 </script>
-<?php echo $footer; ?>
+<footer class="navbar-fixed-bottom">
+  <div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+   <ul class="list-inline text-right">
+        <?php if($order_status == 3){ ?>
+        <li><a href="<?php echo $express; ?>" class="btn-sm btn-default">查看物流</a></li>
+        <li><button class="btn-sm btn-default" title="确认收货">确认收货</button></li>
+        <?php }else if($order_status == 5) {?>
+        <li><button class="btn-sm btn-default" title="#">追加评价</button></li>
+        <?php }else{ ?>
+        <li><a href="<?php echo $express; ?>" class="btn-sm btn-info">取消订单</a></li>
+        <?php } ?>
+      </ul>
+    </div>
+    </div>
+  </div>
+</footer>
+</body></html>

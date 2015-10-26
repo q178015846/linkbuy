@@ -1,57 +1,70 @@
 <?php echo $header; ?>
-<div class="container">
-  <ul class="breadcrumb">
-    <?php foreach ($breadcrumbs as $breadcrumb) { ?>
-    <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
-    <?php } ?>
+
+
+    <ul class="nav nav-tabs" style="margin-top:10px;">
+  
+    <li class="col-xs-3 text-center">
+      <a href="#tab-all" data-toggle="tab">全部</a>
+    </li>
+    <li class="col-xs-3 text-center">
+      <a href="#tab-wait" data-toggle="tab">待付款</a>
+    </li>
+   
+    <li class="active col-xs-3 text-center">
+     <a href="#tab-check" data-toggle="tab">待收货</a>
+    </li>
+    <li class="col-xs-3 text-center">
+     <a href="#tab-comment" data-toggle="tab">待评价</a>
+    </li>
   </ul>
-  <div class="row"><?php echo $column_left; ?>
-    <?php if ($column_left && $column_right) { ?>
-    <?php $class = 'col-sm-6'; ?>
-    <?php } elseif ($column_left || $column_right) { ?>
-    <?php $class = 'col-sm-9'; ?>
-    <?php } else { ?>
-    <?php $class = 'col-sm-12'; ?>
-    <?php } ?>
-    <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
-      <h1><?php echo $heading_title; ?></h1>
-      <?php if ($orders) { ?>
-      <div class="table-responsive">
-        <table class="table table-bordered table-hover">
-          <thead>
-            <tr>
-              <td class="text-right"><?php echo $column_order_id; ?></td>
-              <td class="text-left"><?php echo $column_status; ?></td>
-              <td class="text-left"><?php echo $column_date_added; ?></td>
-              <td class="text-right"><?php echo $column_product; ?></td>
-              <td class="text-left"><?php echo $column_customer; ?></td>
-              <td class="text-right"><?php echo $column_total; ?></td>
-              <td></td>
-            </tr>
-          </thead>
-          <tbody>
-            <?php foreach ($orders as $order) { ?>
-            <tr>
-              <td class="text-right">#<?php echo $order['order_id']; ?></td>
-              <td class="text-left"><?php echo $order['status']; ?></td>
-              <td class="text-left"><?php echo $order['date_added']; ?></td>
-              <td class="text-right"><?php echo $order['products']; ?></td>
-              <td class="text-left"><?php echo $order['name']; ?></td>
-              <td class="text-right"><?php echo $order['total']; ?></td>
-              <td class="text-right"><a href="<?php echo $order['href']; ?>" data-toggle="tooltip" title="<?php echo $button_view; ?>" class="btn btn-info"><i class="fa fa-eye"></i></a></td>
-            </tr>
-            <?php } ?>
-          </tbody>
-        </table>
+   
+
+<div id="myTabContent" class="tab-content" style="padding:0px;">
+   <div class="tab-pane fade" id="tab-all">
+      <div class="container" id="all">
       </div>
-      <div class="text-right"><?php echo $pagination; ?></div>
-      <?php } else { ?>
-      <p><?php echo $text_empty; ?></p>
-      <?php } ?>
-      <div class="buttons clearfix">
-        <div class="pull-right"><a href="<?php echo $continue; ?>" class="btn btn-primary"><?php echo $button_continue; ?></a></div>
+    </div>
+  
+   <div class="tab-pane fade" id="tab-wait">
+      <div class="container" id="wait">
       </div>
-      <?php echo $content_bottom; ?></div>
-    <?php echo $column_right; ?></div>
+   </div>
+   <div class="tab-pane fade in active" id="tab-check">
+      <div class="container" id="check">
+      </div>
+   </div>
+   <div class="tab-pane fade" id="tab-comment">
+      <div class="container" id="comment">
+      </div>
+   </div>
 </div>
+<script type="text/javascript">
+$('#all').delegate('.pagination a', 'click', function(e) {
+  e.preventDefault();
+
+  $('#all').load(this.href);
+});
+$('#all').load('index.php?route=account/order/order_all');
+
+$('#wai').delegate('.pagination a', 'click', function(e) {
+  e.preventDefault();
+
+  $('#wait').load(this.href);
+});
+$('#wait').load('index.php?route=account/order/order_all&order_status_id=15');
+
+$('#check').delegate('.pagination a', 'click', function(e) {
+  e.preventDefault();
+
+  $('#check').load(this.href);
+});
+$('#check').load('index.php?route=account/order/order_all&order_status_id=3');
+
+$('#comment').delegate('.pagination a', 'click', function(e) {
+  e.preventDefault();
+
+  $('#comment').load(this.href);
+});
+$('#comment').load('index.php?route=account/order/order_all&order_status_id=5');
+</script>
 <?php echo $footer; ?>

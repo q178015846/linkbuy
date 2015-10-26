@@ -1,44 +1,66 @@
 <?php echo $header; ?>
 <div class="container">
-  <ul class="breadcrumb">
-    <?php foreach ($breadcrumbs as $breadcrumb) { ?>
-    <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
-    <?php } ?>
-  </ul>
-  <?php if ($success) { ?>
-  <div class="alert alert-success"><i class="fa fa-check-circle"></i> <?php echo $success; ?></div>
-  <?php } ?>
-  <div class="row"><?php echo $column_left; ?>
-    <?php if ($column_left && $column_right) { ?>
-    <?php $class = 'col-sm-6'; ?>
-    <?php } elseif ($column_left || $column_right) { ?>
-    <?php $class = 'col-sm-9'; ?>
-    <?php } else { ?>
-    <?php $class = 'col-sm-12'; ?>
-    <?php } ?>
-    <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
-      <h2><?php echo $text_my_account; ?></h2>
-      <ul class="list-unstyled">
-        <li><a href="<?php echo $edit; ?>"><?php echo $text_edit; ?></a></li>
-        <li><a href="<?php echo $password; ?>"><?php echo $text_password; ?></a></li>
-        <li><a href="<?php echo $address; ?>"><?php echo $text_address; ?></a></li>
-        <li><a href="<?php echo $wishlist; ?>"><?php echo $text_wishlist; ?></a></li>
-      </ul>
-      <h2><?php echo $text_my_orders; ?></h2>
-      <ul class="list-unstyled">
-        <li><a href="<?php echo $order; ?>"><?php echo $text_order; ?></a></li>
-        <li><a href="<?php echo $download; ?>"><?php echo $text_download; ?></a></li>
-        <?php if ($reward) { ?>
-        <li><a href="<?php echo $reward; ?>"><?php echo $text_reward; ?></a></li>
-        <?php } ?>
-        <li><a href="<?php echo $return; ?>"><?php echo $text_return; ?></a></li>
-        <li><a href="<?php echo $transaction; ?>"><?php echo $text_transaction; ?></a></li>
-      </ul>
-      <h2><?php echo $text_my_newsletter; ?></h2>
-      <ul class="list-unstyled">
-        <li><a href="<?php echo $newsletter; ?>"><?php echo $text_newsletter; ?></a></li>
-      </ul>
-      <?php echo $content_bottom; ?></div>
-    <?php echo $column_right; ?></div>
+  <div class="panel panel-default" style="margin-top:10px;">
+  <div class="panel-heading"> 
+    <div class="media">
+      <div class="pull-left">
+        <a href="#">
+          <img class="media-object img-rounded" style="width:64px;height:64px;" src="image/catalog/demo/apple_logo.jpg" alt="...">
+        </a>
+      </div>
+      <div class="pull-body">
+        <h3 class="media-heading">ROCK WONG</h3>
+      </div>
+    </div>
+  </div>
+  <div call="panel-body">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-4 text-center" style="padding:15px;">
+              <a href="index.php?route=account/order/list_mobile" style="text-decoration:none;"><i class="fa fa-file fa-2x"></i><br>
+                <p style="margin-top:5px;">待处理</p>
+              </a>
+            </div>
+            <div class="col-xs-4 text-center" style="padding:15px;">
+              <a href="index.php?route=account/order/list_mobile" style="text-decoration:none;"><i class="fa fa-truck fa-2x"></i><br>
+                <p style="margin-top:5px;">待收货</p>
+              </a>
+            </div>
+            <div class="col-xs-4 text-center" style="padding:15px;">
+              <a href="index.php?route=account/order/list_mobile" style="text-decoration:none;"><i class="fa fa-leaf fa-2x"></i><br>
+                <p style="margin-top:5px;">待评价</p>
+              </a>
+            </div>
+        </div>
+    </div>
+  </div>
+  <a href="index.php?route=account/order/list_mobile" style="text-decoration:none;">
+  <div class="panel-footer">
+    <i class="fa fa-reorder" style="margin-right:8px;"></i>全部订单<span class="pull-right" aria-hidden="true">&raquo;</span>
+  </div>
+  </a>
 </div>
-<?php echo $footer; ?>
+<div class="panel panel-default" style="margin-top:10px;">
+  
+  <div class="list-group">
+    <a href="#" class="list-group-item">我的余额<span aria-hidden="true" class="pull-right">&raquo;</span></a>
+    <a href="#" class="list-group-item">我的优惠券<span aria-hidden="true" class="pull-right">&raquo;</span></a>
+    <a href="#" class="list-group-item">我的地址<span aria-hidden="true" class="pull-right">&raquo;</span></a>
+    <a href="#" class="list-group-item">商品退换<span aria-hidden="true" class="pull-right">&raquo;</span></a>
+   
+  </div>
+  
+</div>
+
+<div class="panel panel-default" style="margin-top:10px;">
+  
+  <div class="list-group">
+    <a href="#" class="list-group-item">
+    帮助与反馈<span aria-hidden="true" class="pull-right">&raquo;</span>
+    </a>
+  </div>
+  
+</div>
+ 
+ 
+</div>
