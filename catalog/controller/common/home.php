@@ -27,13 +27,17 @@ class ControllerCommonHome extends Controller {
 		//加载微信JS-SDK
 		$signPackage = $this->wx->GetSignPackage();
 
-		$data['column_left'] = $this->load->controller('common/column_left');
+		/*$data['column_left'] = $this->load->controller('common/column_left');
 		$data['column_right'] = $this->load->controller('common/column_right');
 		$data['content_top'] = $this->load->controller('common/content_top');
-		$data['content_bottom'] = $this->load->controller('common/content_bottom');
+		$data['banner'] = $this->load->controller('module/banner');
+		$data['content_bottom'] = $this->load->controller('common/content_bottom');*/
 		$data['footer'] = $this->load->controller('common/footer');
 		$data['header'] = $this->load->controller('common/header');
 		$data['signPackage'] = $signPackage;
+
+		$this->load->model('catalog/product');
+		$data['products'] = $this->model_catalog_product->getProducts();
 
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/common/home.tpl')) {
 			$this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/common/home.tpl', $data));
